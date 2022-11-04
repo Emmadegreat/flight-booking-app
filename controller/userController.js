@@ -7,7 +7,7 @@ exports.getUsers = async(req, res) =>{
     try {
         const users = Users;
         res.status(200).json({
-            message: `all users`,
+            message: `All travellers`,
             users :users
         });
     } catch (err) {
