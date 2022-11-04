@@ -33,13 +33,14 @@ exports.getSingleUser = async(req, res) => {
 //create new user
 exports.createUser = async (req, res) => {
     try {
-        const {name, time, location} = await req.body;
+        const {title, time, price, date} = await req.body;
 
         const newUser = {
             id: uuid(),
-            name,
+            title,
             time,
-            location,
+            price,
+            date,
         };
 
         Users.push(newUser);
@@ -59,10 +60,11 @@ exports.updateUser = async (req, res) => {
     try {
         let id = req.params.id;
         const user = Users.find((user) => user.id === id);
-        const { name, time, location } = await req.body;
-        user.name = name;
+        const { title, time, price, date } = await req.body;
+        user.title = title;
         user.time = time;
-        user.location = location;
+        user.price = price;
+        user.date = date
         res.status(200).json({
             message: `user updated`,
             user,
