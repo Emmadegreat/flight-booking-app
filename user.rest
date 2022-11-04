@@ -1,0 +1,20 @@
+@url ="http://localhost:3000/"
+
+//get all users
+Get http://localhost:3000/user HTTP/1.1
+
+
+###
+//get a single user
+GET http://localhost:3000/user/c4cd29e4-2ba0-43ff-b381-c0dcd2b5b5e2 HTTP/1.1
+
+###
+//add user
+POST http://localhost:3000/user HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Emeka",
+    "time": "5:00pm",
+    "location": "enugu"
+}

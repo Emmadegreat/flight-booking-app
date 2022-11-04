@@ -1,0 +1,25 @@
+{
+  "name": "flight-booking-app",
+  "version": "1.0.0",
+  "description": "'fligt-book-app'",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "'test'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "'https://github.com/Emmadegreat/flight-booking-app.git'"
+  },
+  "author": "'EMMA'",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "lodash": "^4.17.21",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
