@@ -6,7 +6,7 @@ Get http://localhost:3000/user HTTP/1.1
 
 ###
 //get a single user
-GET http://localhost:3000/user/5735e4d0-f5fa-4708-9a74-d55fb06d516a HTTP/1.1
+GET http://localhost:3000/user/876f857e-ab71-4744-aaa6-7e5cec6ce4da HTTP/1.1
 
 ###
 //add user
@@ -14,8 +14,19 @@ POST http://localhost:3000/user HTTP/1.1
 Content-Type: application/json
 
 {
-    "title": "Conference",
-    "time": "8:00am",
-    "price": 20000,
-    "date": "06-11-2022"
+    "title": "shipping",
+    "price": 29000
 }
+
+//update a user
+###
+PUT http://localhost:3000/user/13912b55-d0de-4684-b4ae-78e7185aae6b HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "service",
+    "price": 35000
+}
+//delete a user
+###
+DELETE http://localhost:3000/user/13912b55-d0de-4684-b4ae-78e7185aae6b HTTP/1.1
