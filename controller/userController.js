@@ -3,12 +3,12 @@ const { Users } = require("../model/user");
 const { v4: uuid } = require("uuid");
 const { rest } = require("lodash");
 
-//get all users
+//get all flight
 exports.getUsers = async(req, res) =>{
     try {
         const users = Users;
         res.status(200).json({
-            message: `All travellers`,
+            message: `Alvailable booked flights`,
             users :users
         });
     } catch (err) {
@@ -16,7 +16,7 @@ exports.getUsers = async(req, res) =>{
     }
 }
 
-//get a single user
+//get a single flight
 exports.getSingleUser = async(req, res) => {
     try {
         let id = req.params.id;
@@ -27,11 +27,11 @@ exports.getSingleUser = async(req, res) => {
 
         });
     } catch (err) {
-
+        res.status(500).json({ message: err.message });
     }
 }
 
-//create new user
+//create/add new flight
 exports.createUser = async (req, res) => {
     try {
         const {title, time, price} = await req.body;
@@ -55,7 +55,7 @@ exports.createUser = async (req, res) => {
     }
 }
 
-//update/edit user
+//update/edit flight
 
 exports.updateUser = async (req, res) => {
     try {
@@ -74,7 +74,7 @@ exports.updateUser = async (req, res) => {
     }
 }
 
-//deleting a user
+//deleting a flight
 exports.deleteUser = async (req, res) => {
     try {
         let id = req.params.id;
@@ -90,3 +90,4 @@ exports.deleteUser = async (req, res) => {
         res.status(500).json({ message: err.message });
     }
 };
+
